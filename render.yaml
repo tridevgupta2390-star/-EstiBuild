@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: estibuild
+    runtime: docker
+    plan: free
+    region: singapore
+    healthCheckPath: /login
+    envVars:
+      - key: ADMIN_KEY
+        sync: false
+      - key: SECRET_KEY
+        sync: false
